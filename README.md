@@ -289,7 +289,7 @@ from sklearn.metrics import (
 ## 📊 Confusion Matrix
 
 <p align="center">
-  <img src="<img width="550" height="457" alt="confusionmatrix" src="https://github.com/user-attachments/assets/48615d2a-49f0-427d-9407-985d71708922" />
+  <img src="<img width="550" height="457" alt="confusionmatrix" src="confusionmatrix.png" />
 " width="55%">
 </p>
 
