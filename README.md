@@ -1,79 +1,97 @@
-🧠 Brain Tumor Detection from MRI Images
+# 🧠 Brain Tumor Detection from MRI Images
+### *AI-Powered Medical Image Analysis using Image Processing & Machine Learning*
 
-A complete Image Processing and Machine Learning project for detecting brain tumors from MRI scans using Python, OpenCV, and Scikit-learn.
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.10-blue?style=for-the-badge&logo=python">
+  <img src="https://img.shields.io/badge/OpenCV-Computer%20Vision-green?style=for-the-badge&logo=opencv">
+  <img src="https://img.shields.io/badge/Scikit--Learn-Machine%20Learning-orange?style=for-the-badge&logo=scikitlearn">
+  <img src="https://img.shields.io/badge/Google%20Colab-Notebook-yellow?style=for-the-badge&logo=googlecolab">
+  <img src="https://img.shields.io/badge/Status-Completed-success?style=for-the-badge">
+</p>
 
-⸻
+---
 
-📌 Project Overview
+<p align="center">
+  <img src="images/banner.png" width="100%">
+</p>
 
-This project implements an automated Brain Tumor Detection System using traditional image processing and machine learning techniques.
+---
 
-The system processes MRI brain scan images, performs preprocessing and segmentation, extracts meaningful image features, and classifies MRI scans into:
+# 📌 Overview
 
-* Tumor MRI
-* Normal MRI
+This project presents a complete **Brain Tumor Detection System** developed using traditional **Image Processing** and **Machine Learning** techniques.
 
-The project was developed using:
+The system automatically analyzes MRI brain scan images and classifies them into:
 
-* Python
-* OpenCV
-* NumPy
-* Matplotlib
-* Scikit-learn
-* Google Colab
+✅ Tumor MRI  
+✅ Normal MRI
 
-The objective of the project is to assist medical image analysis by reducing manual effort and improving tumor identification efficiency.
+The project combines:
 
-⸻
+- 🖼️ Digital Image Processing
+- 🧠 Medical Image Analysis
+- 🤖 Machine Learning
+- 👁️ Computer Vision
 
-🚀 Features
+to create an automated MRI classification pipeline.
 
-✅ MRI image preprocessing
+---
 
-✅ Histogram Equalization
+# ✨ Features
 
-✅ Gaussian Blur noise reduction
+<div align="center">
 
-✅ Tumor segmentation using thresholding
+| Feature | Description |
+|---|---|
+| 🖼️ MRI Preprocessing | Enhances MRI quality |
+| 🌫️ Gaussian Blur | Removes image noise |
+| 📈 Histogram Equalization | Improves contrast |
+| 🧩 Tumor Segmentation | Detects suspicious regions |
+| ✂️ Edge Detection | Structural boundary extraction |
+| 🔍 Contour Detection | Tumor region localization |
+| 📦 Feature Extraction | MRI image statistics |
+| 🌲 Random Forest Model | MRI classification |
+| 📊 Confusion Matrix | Performance evaluation |
+| 🤖 Automated Pipeline | End-to-end processing |
 
-✅ Canny edge detection
+</div>
 
-✅ Morphological operations
+---
 
-✅ Contour detection and bounding boxes
+# 🧠 Technologies Used
 
-✅ Feature extraction from MRI images
+<p align="center">
 
-✅ Random Forest Classification
+<img src="https://skillicons.dev/icons?i=python,opencv,sklearn" />
 
-✅ Confusion Matrix visualization
+</p>
 
-✅ Classification Report generation
+| Technology | Purpose |
+|---|---|
+| Python | Core Programming |
+| OpenCV | Image Processing |
+| NumPy | Numerical Computing |
+| Matplotlib | Visualization |
+| Scikit-learn | Machine Learning |
+| Google Colab | Development Environment |
 
-✅ End-to-end automated pipeline
+---
 
-⸻
+# 📂 Project Structure
 
-🧠 Technologies Used
-
-Technology	Purpose
-Python	Core Programming
-OpenCV	Image Processing
-NumPy	Numerical Operations
-Matplotlib	Visualization
-Scikit-learn	Machine Learning
-Google Colab	Development Environment
-
-⸻
-
-📂 Project Structure
-
+```bash
 Brain-Tumor-Detection/
 │
-├── imageproc_032.ipynb          # Main Google Colab notebook
-├── Report-032.pdf               # Project report
-├── README.md                    # GitHub documentation
-├── dataset.zip                  # MRI dataset
+├── imageproc_032.ipynb
+├── Report-032.pdf
+├── README.md
+├── dataset.zip
+│
+├── images/
+│   ├── banner.png
+│   ├── sample_results.png
+│   ├── segmentation.png
+│   └── confusion_matrix.png
 │
 ├── output/
 │   ├── preprocessing_results/
@@ -81,64 +99,18 @@ Brain-Tumor-Detection/
 │   ├── confusion_matrix/
 │   └── predictions/
 │
-└── images/
-    ├── sample_results.png
-    ├── segmentation.png
-    └── confusion_matrix.png
+└── requirements.txt
+```
 
-⸻
+---
 
-📊 Dataset Information
+# 🧪 MRI Processing Pipeline
 
-The dataset contains MRI brain scan images divided into two categories:
+<p align="center">
+  <img src="images/pipeline.png" width="85%">
+</p>
 
-* Tumor Images
-* Normal Images
-
-All MRI scans were resized to:
-
-224 × 224 pixels
-
-before being processed by the pipeline.
-
-⸻
-
-⚙️ Project Workflow
-
-1️⃣ Dataset Upload
-
-The dataset ZIP file is uploaded into Google Colab.
-
-uploaded = files.upload()
-
-⸻
-
-2️⃣ Image Preprocessing
-
-Several preprocessing techniques are applied to improve MRI image quality.
-
-✔ Grayscale Conversion
-
-Converts RGB images into grayscale.
-
-gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-
-✔ Gaussian Blur
-
-Removes image noise and smooths the MRI scan.
-
-blurred = cv2.GaussianBlur(gray, (5,5), 0)
-
-✔ Histogram Equalization
-
-Improves image contrast.
-
-equalized = cv2.equalizeHist(blurred)
-
-⸻
-
-🧪 Preprocessing Pipeline
-
+```text
 MRI Image
    ↓
 Grayscale Conversion
@@ -146,99 +118,6 @@ Grayscale Conversion
 Gaussian Blur
    ↓
 Histogram Equalization
-   ↓
-Enhanced MRI Image
-
-⸻
-
-🧩 Tumor Segmentation
-
-The project identifies suspicious tumor regions using multiple image processing methods.
-
-✔ Thresholding
-
-Separates foreground from background.
-
-_, thresh = cv2.threshold(equalized, 45, 255, cv2.THRESH_BINARY)
-
-✔ Canny Edge Detection
-
-Detects structural boundaries.
-
-edges = cv2.Canny(equalized, 50, 150)
-
-✔ Morphological Operations
-
-Removes small noise artifacts.
-
-kernel = np.ones((3,3), np.uint8)
-opened = cv2.morphologyEx(thresh, cv2.MORPH_OPEN, kernel)
-
-✔ Contour Detection
-
-Detects candidate tumor regions.
-
-contours, _ = cv2.findContours(opened, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
-
-Bounding boxes are drawn around detected regions.
-
-⸻
-
-🧠 Feature Extraction
-
-The following features are extracted from MRI images:
-
-Feature	Description
-Mean Intensity	Average pixel value
-Standard Deviation	Intensity variation
-Edge Pixel Count	Number of edge pixels
-Contour Count	Number of contours
-Largest Contour Area	Size of detected region
-Texture Features	MRI texture characteristics
-
-⸻
-
-🤖 Machine Learning Model
-
-A Random Forest Classifier is trained using extracted image features.
-
-from sklearn.ensemble import RandomForestClassifier
-model = RandomForestClassifier(n_estimators=100)
-model.fit(X_train, y_train)
-
-⸻
-
-📈 Model Evaluation
-
-The model performance is evaluated using:
-
-* Accuracy Score
-* Confusion Matrix
-* Classification Report
-
-from sklearn.metrics import confusion_matrix, classification_report
-
-⸻
-
-📷 Output Results
-
-The project generates:
-
-* Original MRI Images
-* Preprocessed MRI Images
-* Edge Detection Outputs
-* Tumor Segmentation Results
-* Contour Detection Results
-* Confusion Matrix
-* Final Predictions
-
-⸻
-
-📌 Sample Pipeline
-
-MRI Image
-   ↓
-Preprocessing
    ↓
 Thresholding
    ↓
@@ -253,136 +132,261 @@ Feature Extraction
 Random Forest Classification
    ↓
 Tumor / Normal Prediction
+```
 
-⸻
+---
 
-▶️ How to Run the Project
+# 📊 Dataset Information
 
-Step 1 — Clone Repository
+The dataset contains MRI brain scans divided into:
 
-git clone https://github.com/your-username/Brain-Tumor-Detection.git
+- 🧠 Tumor Images
+- ✅ Normal Images
 
-⸻
+All MRI images were resized to:
 
-Step 2 — Install Dependencies
+```python
+224 × 224 pixels
+```
 
-pip install opencv-python numpy matplotlib scikit-learn
+before processing.
 
-⸻
+---
 
-Step 3 — Open Notebook
+# ⚙️ Image Preprocessing
 
-Open the notebook in:
+## 🔹 Grayscale Conversion
 
-* Google Colab
-* Jupyter Notebook
+```python
+gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+```
 
-⸻
+---
 
-Step 4 — Upload Dataset ZIP
+## 🔹 Gaussian Blur
 
-Upload the MRI dataset ZIP file when prompted.
+```python
+blurred = cv2.GaussianBlur(gray, (5,5), 0)
+```
 
-⸻
+---
 
-Step 5 — Run All Cells
+## 🔹 Histogram Equalization
 
-Execute all notebook cells sequentially.
+```python
+equalized = cv2.equalizeHist(blurred)
+```
 
-⸻
+---
 
-🖥️ Required Libraries
+# 🧩 Tumor Segmentation
 
+## 🔹 Thresholding
+
+```python
+_, thresh = cv2.threshold(equalized, 45, 255, cv2.THRESH_BINARY)
+```
+
+---
+
+## 🔹 Edge Detection
+
+```python
+edges = cv2.Canny(equalized, 50, 150)
+```
+
+---
+
+## 🔹 Morphological Operations
+
+```python
+kernel = np.ones((3,3), np.uint8)
+
+opened = cv2.morphologyEx(
+    thresh,
+    cv2.MORPH_OPEN,
+    kernel
+)
+```
+
+---
+
+## 🔹 Contour Detection
+
+```python
+contours, _ = cv2.findContours(
+    opened,
+    cv2.RETR_EXTERNAL,
+    cv2.CHAIN_APPROX_SIMPLE
+)
+```
+
+Bounding boxes are drawn around suspicious tumor regions.
+
+---
+
+# 🧠 Feature Extraction
+
+The following image features are extracted:
+
+| Feature | Description |
+|---|---|
+| Mean Intensity | Average pixel value |
+| Standard Deviation | Pixel variation |
+| Edge Pixel Count | Number of edge pixels |
+| Contour Count | Number of contours |
+| Largest Contour Area | Tumor region size |
+| Texture Features | MRI texture information |
+
+---
+
+# 🤖 Machine Learning Model
+
+The project uses a **Random Forest Classifier** for MRI classification.
+
+```python
+from sklearn.ensemble import RandomForestClassifier
+
+model = RandomForestClassifier(
+    n_estimators=100,
+    random_state=42
+)
+
+model.fit(X_train, y_train)
+```
+
+---
+
+# 📈 Model Evaluation
+
+The trained model is evaluated using:
+
+✅ Accuracy Score  
+✅ Confusion Matrix  
+✅ Classification Report
+
+```python
+from sklearn.metrics import (
+    accuracy_score,
+    classification_report,
+    confusion_matrix
+)
+```
+
+---
+
+# 📷 Output Results
+
+## 🧠 MRI Segmentation
+
+<p align="center">
+  <img src="images/segmentation.png" width="70%">
+</p>
+
+---
+
+## 📊 Confusion Matrix
+
+<p align="center">
+  <img src="images/confusion_matrix.png" width="55%">
+</p>
+
+---
+
+## 🔍 Sample Predictions
+
+<p align="center">
+  <img src="images/sample_results.png" width="80%">
+</p>
+
+---
+
+# 🖥️ Required Libraries
+
+```python
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
 import os
 import random
+
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.metrics import accuracy_score
-from sklearn.metrics import classification_report
-from sklearn.metrics import confusion_matrix
 
-⸻
+from sklearn.metrics import (
+    accuracy_score,
+    classification_report,
+    confusion_matrix
+)
+```
 
-📚 Key Learning Outcomes
+---
+
+# 📚 Learning Outcomes
 
 This project demonstrates practical implementation of:
 
-* Digital Image Processing
-* Medical Image Analysis
-* Computer Vision
-* MRI Segmentation
-* Feature Engineering
-* Machine Learning Classification
-* OpenCV Operations
-* Random Forest Algorithms
+✅ Digital Image Processing  
+✅ MRI Image Analysis  
+✅ Medical Imaging  
+✅ Computer Vision  
+✅ Feature Engineering  
+✅ Machine Learning Classification  
+✅ OpenCV Operations  
+✅ Random Forest Algorithms  
 
-⸻
+---
 
-⚠️ Limitations
+# ⚠️ Limitations
 
-* Performance depends on MRI image quality
-* Small datasets may reduce generalization
-* False positives can occur during contour detection
-* Traditional ML methods are less powerful than deep learning models
+- MRI image quality affects performance
+- Small datasets may reduce generalization
+- False positives can occur during contour detection
+- Traditional ML models are less powerful than Deep Learning approaches
 
-⸻
+---
 
-🔮 Future Improvements
+# 🔮 Future Improvements
 
-Future versions of this project can include:
+✅ CNN-Based Deep Learning Models  
+✅ U-Net Tumor Segmentation  
+✅ Streamlit / Flask Web Application  
+✅ Real-Time MRI Analysis  
+✅ Multi-Class Tumor Classification  
+✅ Cloud Deployment  
+✅ Larger Medical Datasets  
 
-✅ Deep Learning CNN Models
+---
 
-✅ U-Net Segmentation
+# 📌 Conclusion
 
-✅ Real-time MRI Analysis
+This project successfully demonstrates how **Image Processing** and **Machine Learning** techniques can be combined for automated brain tumor detection from MRI images.
 
-✅ Web Application Deployment
+The system performs:
 
-✅ Flask / Streamlit Interface
+✔ MRI preprocessing  
+✔ Tumor segmentation  
+✔ Contour analysis  
+✔ Feature extraction  
+✔ Random Forest classification  
 
-✅ Larger Medical Datasets
+to classify MRI scans as:
 
-✅ Multi-class Tumor Classification
+🧠 Tumor  
+✅ Normal
 
-⸻
+The project provides a strong foundation for advanced AI-based medical imaging applications and healthcare automation systems.
 
-📌 Conclusion
+---
 
-This project successfully demonstrates how image processing and machine learning techniques can be combined to detect brain tumors from MRI images.
+# 📜 License
 
-The system applies preprocessing, segmentation, contour analysis, feature extraction, and Random Forest classification to automatically identify tumor and normal MRI scans.
+This project is developed for educational and academic purposes only.
 
-The project provides a strong foundation for advanced medical imaging and AI-based healthcare applications.
+ 
 
-⸻
+---
 
-👨‍💻 Author
-
-IMAAD AHAMED
-
-Artificial Intelligence & Machine Learning Undergraduate
-
-Specializations:
-
-* AI & Machine Learning
-* Computer Vision
-* Image Processing
-* Deep Learning
-* IoT & Robotics
-
-
-⸻
-
-📜 License
-
-This project is for educational and academic purposes.
-
-⸻
-
-🌟 If you like this project
-
-Give this repository a ⭐ on GitHub.
+<p align="center">
+  <b>🧠 AI for Healthcare • Medical Imaging • Computer Vision</b>
+</p>
