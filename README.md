@@ -280,27 +280,25 @@ from sklearn.metrics import (
 ## 🧠 MRI Segmentation
 
 <p align="center">
-  <img src="<img width="1478" height="790" alt="segmentation" src="<img width="1478" height="790" alt="segmentation" src="https://github.com/user-attachments/assets/2d8072ba-7af4-43e5-a466-f3a29d02d3f5" />
-" />
-" width="70%">
+  <img src="images/segmentation.png" width="70%">
 </p>
+
 
 ---
 
 ## 📊 Confusion Matrix
 
 <p align="center">
-  <img src="<img width="550" height="457" alt="confusionmatrix" src="confusionmatrix.png" />
-" width="55%">
+  <img src="images/confusionmatrix.png" width="55%">
 </p>
+
 
 ---
 
 ## 🔍 Sample Predictions
 
 <p align="center">
-  <img src="<img width="1471" height="994" alt="predictimg" src="https://github.com/user-attachments/assets/9a2abec8-cb55-4f33-a193-3ab45cd2d257" />
-" width="80%">
+  <img src="images/predictimg.png" width="80%">
 </p>
 
 ---
