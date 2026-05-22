@@ -280,7 +280,8 @@ from sklearn.metrics import (
 ## 🧠 MRI Segmentation
 
 <p align="center">
-  <img src="<img width="1478" height="790" alt="segmentation" src="https://github.com/user-attachments/assets/2f212172-8169-4d45-a88f-9d796ff7420e" />
+  <img src="<img width="1478" height="790" alt="segmentation" src="<img width="1478" height="790" alt="segmentation" src="https://github.com/user-attachments/assets/2d8072ba-7af4-43e5-a466-f3a29d02d3f5" />
+" />
 " width="70%">
 </p>
 
