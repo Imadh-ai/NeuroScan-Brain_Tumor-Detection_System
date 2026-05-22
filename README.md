@@ -280,28 +280,24 @@ from sklearn.metrics import (
 ## 🧠 MRI Segmentation
 
 <p align="center">
-  <img src="images/segmentation.png" width="70%">
+  <img src="Output images folder/plot_images/segmentation.png" width="70%">
 </p>
-
 
 ---
 
 ## 📊 Confusion Matrix
 
 <p align="center">
-  <img src="images/confusionmatrix.png" width="55%">
+  <img src="Output images folder/plot_images/confusionmatrix.png" width="55%">
 </p>
-
 
 ---
 
 ## 🔍 Sample Predictions
 
 <p align="center">
-  <img src="images/predictimg.png" width="80%">
+  <img src="Output images folder/plot_images/predictimg.png" width="80%">
 </p>
-
----
 
 # 🖥️ Required Libraries
 
