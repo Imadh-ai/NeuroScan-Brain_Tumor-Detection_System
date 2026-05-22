@@ -12,7 +12,7 @@
 ---
 
 <p align="center">
-  <img src="images/banner.png" width="100%">
+  <img src="Output images folder/plot_images/23125pexels-mart-production-7088489.jpg" width="50%">
 </p>
 
 ---
